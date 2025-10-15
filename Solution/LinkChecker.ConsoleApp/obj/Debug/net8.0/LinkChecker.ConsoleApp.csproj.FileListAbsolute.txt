@@ -28,3 +28,8 @@ C:\Code\GitHub\Link-Checker\Solution\LinkChecker.ConsoleApp\obj\Debug\net8.0\ref
 C:\Code\GitHub\Link-Checker\Solution\LinkChecker.ConsoleApp\obj\Debug\net8.0\LinkChecker.ConsoleApp.pdb
 C:\Code\GitHub\Link-Checker\Solution\LinkChecker.ConsoleApp\obj\Debug\net8.0\LinkChecker.ConsoleApp.genruntimeconfig.cache
 C:\Code\GitHub\Link-Checker\Solution\LinkChecker.ConsoleApp\obj\Debug\net8.0\ref\LinkChecker.ConsoleApp.dll
+C:\Code\GitHub\Link-Checker\Solution\LinkChecker.ConsoleApp\bin\Debug\net8.0\HtmlAgilityPack.dll
+C:\Code\GitHub\Link-Checker\Solution\LinkChecker.ConsoleApp\bin\Debug\net8.0\Link.Checker.ClassLibrary.dll
+C:\Code\GitHub\Link-Checker\Solution\LinkChecker.ConsoleApp\bin\Debug\net8.0\Link.Checker.ClassLibrary.pdb
+C:\Code\GitHub\Link-Checker\Solution\LinkChecker.ConsoleApp\obj\Debug\net8.0\LinkChecker.ConsoleApp.csproj.AssemblyReference.cache
+C:\Code\GitHub\Link-Checker\Solution\LinkChecker.ConsoleApp\obj\Debug\net8.0\LinkChec.435C60A4.Up2Date

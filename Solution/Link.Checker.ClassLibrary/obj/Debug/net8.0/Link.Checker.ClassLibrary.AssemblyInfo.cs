@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Link.Checker.ClassLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e79e45789ca65cbbb7fcf2208f71620a439d016a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+683ee942dcad148e84b2809b6f2079c59d61af46")]
 [assembly: System.Reflection.AssemblyProductAttribute("Link.Checker.ClassLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Link.Checker.ClassLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

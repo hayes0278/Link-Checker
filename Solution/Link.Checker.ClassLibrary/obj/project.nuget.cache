@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UW3TWGpvNEc=",
+  "dgSpecHash": "ymB5IHwbf2E=",
   "success": true,
   "projectFilePath": "C:\\Code\\GitHub\\Link-Checker\\Solution\\Link.Checker.ClassLibrary\\Link.Checker.ClassLibrary.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\marsh\\.nuget\\packages\\htmlagilitypack\\1.12.4\\htmlagilitypack.1.12.4.nupkg.sha512"
+  ],
   "logs": []
 }

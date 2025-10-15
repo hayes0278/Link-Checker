@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+4zkfHEnx8g=",
+  "dgSpecHash": "+1oezTEvCn8=",
   "success": true,
   "projectFilePath": "C:\\Code\\GitHub\\Link-Checker\\Solution\\LinkChecker.ConsoleApp\\LinkChecker.ConsoleApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\marsh\\.nuget\\packages\\htmlagilitypack\\1.12.4\\htmlagilitypack.1.12.4.nupkg.sha512"
+  ],
   "logs": []
 }
