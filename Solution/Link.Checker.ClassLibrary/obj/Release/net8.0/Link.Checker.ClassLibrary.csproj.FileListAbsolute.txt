@@ -22,3 +22,4 @@ C:\Code\GitHub\Link-Checker\Solution\Link.Checker.ClassLibrary\obj\Release\net8.
 C:\Code\GitHub\Link-Checker\Solution\Link.Checker.ClassLibrary\obj\Release\net8.0\refint\Link.Checker.ClassLibrary.dll
 C:\Code\GitHub\Link-Checker\Solution\Link.Checker.ClassLibrary\obj\Release\net8.0\Link.Checker.ClassLibrary.pdb
 C:\Code\GitHub\Link-Checker\Solution\Link.Checker.ClassLibrary\obj\Release\net8.0\ref\Link.Checker.ClassLibrary.dll
+C:\Code\GitHub\Link-Checker\Solution\Link.Checker.ClassLibrary\obj\Release\net8.0\Link.Checker.ClassLibrary.csproj.AssemblyReference.cache

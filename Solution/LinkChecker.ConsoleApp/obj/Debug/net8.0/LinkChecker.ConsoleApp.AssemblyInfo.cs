@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LinkChecker.ConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+683ee942dcad148e84b2809b6f2079c59d61af46")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fce055b230378781b0a3e0459932e7b0cf09724")]
 [assembly: System.Reflection.AssemblyProductAttribute("LinkChecker.ConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LinkChecker.ConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

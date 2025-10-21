@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using System.Threading.Tasks;
 using System.Xml;
 
 namespace Link.Checker.ClassLibrary
@@ -9,40 +10,57 @@ namespace Link.Checker.ClassLibrary
         string _url = null;
         List<string> _links = new List<string>();
 
-        public List<string> ExtractLinksFromUrl(string url)
+        public async Task<List<string>> ExtractLinksFromUrl(string url)
 
         {
-            var links = new List<string>();
-            using (var httpClient = new HttpClient())
+            Console.WriteLine($"Main thread ID: {Thread.CurrentThread.ManagedThreadId}");
+
+            // Define the work to be performed in the background task
+            Action backgroundWork = () =>
             {
-                var html = httpClient.GetStringAsync(url);
-                var doc = new HtmlDocument();
-                doc.LoadHtml(html.ToString());
+                Console.WriteLine($"Task started on thread ID: {Thread.CurrentThread.ManagedThreadId}");
 
-                foreach (var link in doc.DocumentNode.SelectNodes("//a[@href]"))
+                using (var httpClient = new HttpClient())
                 {
-                    string href = link.GetAttributeValue("href", string.Empty);
+                    var html = httpClient.GetStringAsync(url);
+                    var doc = new HtmlDocument();
+                    doc.LoadHtml(html.ToString());
 
-                    if (!string.IsNullOrEmpty(href))
+                    foreach (var link in doc.DocumentNode.SelectNodes("//a[@href]"))
                     {
-                        // Convert relative URLs to absolute URLs
-                        if (Uri.TryCreate(new Uri(url), href, out Uri absoluteUri))
-                        {
-                            links.Add(absoluteUri.ToString());
-                        }
+                        string href = link.GetAttributeValue("href", string.Empty);
 
-                        else
+                        if (!string.IsNullOrEmpty(href))
                         {
-                            links.Add(href);
+                            // Convert relative URLs to absolute URLs
+                            if (Uri.TryCreate(new Uri(url), href, out Uri absoluteUri))
+                            {
+                                _links.Add(absoluteUri.ToString());
+                            }
+
+                            else
+                            {
+                                _links.Add(href);
+                            }
                         }
                     }
                 }
-            }
 
-            _links = links;
+                Thread.Sleep(2000);
+                Console.WriteLine("Task completed.");
+            };
 
-            return links;
+            // Run the task immediately on a thread pool thread
+            Task task = Task.Run(backgroundWork);
 
+            Console.WriteLine("Main thread continues execution immediately after starting the task.");
+
+            // Optionally, wait for the task to complete if necessary
+            task.Wait();
+
+            Console.WriteLine("Main thread finished.");
+
+            return _links;
         }
 
         public static async Task GetHeadStatusCode(string url)
@@ -74,10 +92,19 @@ namespace Link.Checker.ClassLibrary
 
             ExtractLinksFromUrl(url);
 
-            foreach (var link in _links) 
+            foreach (string linkUrl in _links) 
             {
-                GetHeadStatusCode(link);
+                Console.WriteLine($"Checking link {linkUrl}");
+                GetHeadStatusCode(linkUrl);
             }
+
+        }
+
+        public void CheckHeadStatusCode(string url)
+        {
+            Console.WriteLine($"Checking status code for {url}");
+
+            GetHeadStatusCode(url);
 
         }
     }
