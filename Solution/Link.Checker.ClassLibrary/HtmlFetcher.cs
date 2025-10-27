@@ -59,7 +59,7 @@ namespace Link.Checker.ClassLibrary
             catch (HttpRequestException e)
             {
                 // Handle exceptions related to HTTP requests (e.g., network issues, invalid URL)
-                Console.WriteLine($"Request exception: {e.Message}");
+                Console.WriteLine($"URL input error: {e.Message}");
                 return null;
             }
         }

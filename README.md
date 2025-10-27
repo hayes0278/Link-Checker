@@ -9,7 +9,7 @@ A lightweight CLI utility written in C# that checks web pages for broken links.
 - Requires no external libraries or dependencies.
 
 ## Screenshots 
-![Link Checker Screenshot](https://github.com/hayes0278/Link-Checker/blob/main/Media/Screenshots/Link-Checker-A.png)
+![Link Checker Screenshot](Media/Screenshots/Link-Checker-A.png)
 
 ## Examples
 ```
