@@ -1,20 +1,14 @@
 # Link Checker
-A lightweight CLI utility written in C# that checks web pages for broken links.
+A lightweight CLI utility written in C# that checks a web page for broken links.
 
 ## Features
 - Detects broken links (403, 500 errors).
 - Handles both absolute and relative URL's.
 - Skips non-HTTP links (mailto, tel etc).
 - Fast link checking using HTTP HEAD.
-- Requires no external libraries or dependencies.
 
 ## Screenshots 
 ![Link Checker Screenshot](Media/Screenshots/Link-Checker-A.png)
-
-## Examples
-```
-cmd> LinkChecker.ConsoleApp.exe [URL]
-```
 
 ## To Run
 After downloading the source code, then double click on the LinkChecker.ConsoleApp executable file in the bin directory.
@@ -29,4 +23,4 @@ After downloading the source code, then double click on the LinkChecker.ConsoleA
 ## Limitations
 - Does not handle JavaScript-rendered links.
 - May miss some dynamically generated URL's.
-- Rate limits are not implemented, so be careful with large websites.
+- Rate limits are not implemented, so no large websites please.

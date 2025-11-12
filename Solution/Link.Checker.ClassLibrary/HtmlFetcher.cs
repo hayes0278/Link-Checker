@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.Http;
-using System.Threading.Tasks;
-
-namespace Link.Checker.ClassLibrary
+﻿namespace Link.Checker.ClassLibrary
 {
     public class HtmlFetcher
     {
@@ -28,8 +20,6 @@ namespace Link.Checker.ClassLibrary
             {
                 Console.WriteLine($"Task started on thread ID: {Thread.CurrentThread.ManagedThreadId}");
                 
-
-
 
 
                 Thread.Sleep(2000);

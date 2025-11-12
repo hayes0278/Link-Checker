@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LinkChecker.NUnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91c682a2ba2e7c4f965a37e2a5425c32bc891bd0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6bdb2edbce5a0f7d8552c15d7335b5cfd0cabe3c")]
 [assembly: System.Reflection.AssemblyProductAttribute("LinkChecker.NUnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LinkChecker.NUnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

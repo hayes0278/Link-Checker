@@ -1,15 +1,13 @@
 ﻿using HtmlAgilityPack;
-using System.Threading.Tasks;
-using System.Xml;
 
 namespace Link.Checker.ClassLibrary
 {
-    public class LinkChecker
+    public class LinkCheckerApp
     {
 
-        string _url = null;
+        string _defaultProtocol = "https://";
         List<string> _links = new List<string>();
-        HtmlDocument _doc = new HtmlDocument();
+        HtmlDocument _document = new HtmlDocument();
 
         public async Task<List<string>> ExtractLinksFromUrl(string url)
 
@@ -18,42 +16,50 @@ namespace Link.Checker.ClassLibrary
             {
                 Console.WriteLine($"Get HTML Task started on thread ID: {Thread.CurrentThread.ManagedThreadId}");
 
+                if (!url.Contains("http") && !url.Contains("https"))
+                {
+                    url = _defaultProtocol + url;
+                }
+
                 HtmlFetcher fetch = new HtmlFetcher(url);
                 var html = fetch.GetHtmlAsStringAsync(url);
-                _doc.LoadHtml(html.ToString());
-
-                Console.WriteLine("Get HTML Task completed.");
+                _document.LoadHtml(html.ToString());
             };
 
             Task task = Task.Run(backgroundWork);
 
             task.Wait();
 
-            if (_doc != null)
+            Console.WriteLine("Get HTML Task completed.");
+
+            if (_document != null)
             {
-                foreach (var link in _doc.DocumentNode.SelectNodes("//a[@href]"))
+                var nodes = _document.DocumentNode.SelectNodes("//a[@href]");
+
+                if (nodes != null)
                 {
-                    string href = link.GetAttributeValue("href", string.Empty);
-
-                    if (!string.IsNullOrEmpty(href))
+                    foreach (var link in nodes)
                     {
-                        // Convert relative URLs to absolute URLs
-                        if (Uri.TryCreate(new Uri(url), href, out Uri absoluteUri))
-                        {
-                            _links.Add(absoluteUri.ToString());
-                        }
+                        string href = link.GetAttributeValue("href", string.Empty);
 
-                        else
+                        if (!string.IsNullOrEmpty(href))
                         {
-                            _links.Add(href);
+                            // Convert relative URLs to absolute URLs
+                            if (Uri.TryCreate(new Uri(url), href, out Uri absoluteUri))
+                            {
+                                _links.Add(absoluteUri.ToString());
+                            }
+
+                            else
+                            {
+                                _links.Add(href);
+                            }
                         }
                     }
                 }
             }
 
             Console.WriteLine("Main thread finished.");
-
-            Console.WriteLine(_doc.BackwardCompatibility);
 
             return _links;
         }
@@ -76,25 +82,35 @@ namespace Link.Checker.ClassLibrary
             }
         }
 
-        public void CheckLinks(string url)
+        public bool CheckLinks(string url)
         {
             Console.WriteLine($"Checking links for {url}");
 
             ExtractLinksFromUrl(url);
 
-            foreach (string linkUrl in _links)
+            if (_links != null)
             {
-                Console.WriteLine($"Checking link {linkUrl}");
-                GetHeadStatusCode(linkUrl);
-            }
+                foreach (string linkUrl in _links)
+                {
+                    Console.WriteLine($"Checking link {linkUrl}");
+                    GetHeadStatusCode(linkUrl);
+                }
 
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        public void CheckHeadStatusCode(string url)
+        public bool CheckHeadStatusCode(string url)
         {
             Console.WriteLine($"Checking status code for {url}");
 
             GetHeadStatusCode(url);
+
+            return true;
 
         }
     }

@@ -198,3 +198,7 @@ C:\Code\GitHub\Link-Checker\Solution\LinkChecker.NUnitTests\obj\Debug\net8.0\ref
 C:\Code\GitHub\Link-Checker\Solution\LinkChecker.NUnitTests\obj\Debug\net8.0\LinkChecker.NUnitTests.pdb
 C:\Code\GitHub\Link-Checker\Solution\LinkChecker.NUnitTests\obj\Debug\net8.0\LinkChecker.NUnitTests.genruntimeconfig.cache
 C:\Code\GitHub\Link-Checker\Solution\LinkChecker.NUnitTests\obj\Debug\net8.0\ref\LinkChecker.NUnitTests.dll
+C:\Code\GitHub\Link-Checker\Solution\LinkChecker.NUnitTests\bin\Debug\net8.0\CoverletSourceRootsMapping_LinkChecker.NUnitTests
+C:\Code\GitHub\Link-Checker\Solution\LinkChecker.NUnitTests\bin\Debug\net8.0\HtmlAgilityPack.dll
+C:\Code\GitHub\Link-Checker\Solution\LinkChecker.NUnitTests\bin\Debug\net8.0\Link.Checker.ClassLibrary.dll
+C:\Code\GitHub\Link-Checker\Solution\LinkChecker.NUnitTests\bin\Debug\net8.0\Link.Checker.ClassLibrary.pdb

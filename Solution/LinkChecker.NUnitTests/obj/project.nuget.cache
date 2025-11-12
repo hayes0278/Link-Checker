@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gzWXE9n48Pg=",
+  "dgSpecHash": "MB+x1dq/XDg=",
   "success": true,
   "projectFilePath": "C:\\Code\\GitHub\\Link-Checker\\Solution\\LinkChecker.NUnitTests\\LinkChecker.NUnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marsh\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
+    "C:\\Users\\marsh\\.nuget\\packages\\htmlagilitypack\\1.12.4\\htmlagilitypack.1.12.4.nupkg.sha512",
     "C:\\Users\\marsh\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
     "C:\\Users\\marsh\\.nuget\\packages\\microsoft.net.test.sdk\\17.8.0\\microsoft.net.test.sdk.17.8.0.nupkg.sha512",
     "C:\\Users\\marsh\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
